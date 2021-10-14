@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="width=device-width" , initial-scale="1.0" />
+    <title>Animation Lab</title>
+    <style>
+      .header {
+        height: 160px;
+        width: 800px;
+        background-color: #000099;
+        margin: auto;
+      }
+
+      .section {
+        height: 100px;
+        width: 800px;
+        background-color: #fff;
+        display: flex;
+      }
+
+      .tile {
+        height: 100px;
+        width: 100px;
+        background-color: #ad34ad;
+        border-style: solid;
+        border-color: grey;
+      }
+
+      .goodtile {
+        height: 100px;
+        width: 100px;
+        background-color: #31df65;
+        border-style: solid;
+        border-color: grey;
+      }
+
+      .badtile {
+        height: 100px;
+        width: 100px;
+        background-color: #e20031;
+        border-style: solid;
+        border-color: grey;
+      }
+
+      .player {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+      }
+
+      .spinner {
+        background-color: dodgerblue;
+        height: 100px;
+        width: 100px;
+        border-radius: 30px;
+        font-size: 80px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="title">Caleb Imel - Board Game</h2>
+
+    <div style="display: flex">
+      <div
+        class="player"
+        id="p1"
+        style="background-color: rgb(0, 44, 240)"
+      ></div>
+      <div
+        class="player"
+        id="p2"
+        style="background-color: rgb(255, 56, 99)"
+      ></div>
+    </div>
+
+    <div class="section">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="badtile"></div>
+      <div class="tile"></div>
+      <div class="goodtile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+    <div class="section">
+      <div
+        class="goodtile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div class="badtile"></div>
+    </div>
+    <div class="section">
+      <div class="tile"></div>
+      <div
+        class="badtile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="goodtile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="goodtile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+    </div>
+    <div class="section">
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="badtile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="tile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="goodtile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div
+        class="badtile"
+        style="border-top-width: 10px; border-top-color: rgb(153, 41, 0)"
+      ></div>
+      <div class="tile"></div>
+    </div>
+
+    <h2 id="instructions">VVV Click Spinner to Start VVV</h2>
+    <div class="spinner" id="spinner" onclick="taketurn(spinner.spin())">!</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
